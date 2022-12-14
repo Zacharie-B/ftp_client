@@ -5,7 +5,7 @@ from entities.search import Search
 
 class SearchCache:
     def __init__(self):
-        self.__searches = list[Search]
+        self.__searches = list()
 
     def add(self, search):
         self.__searches.insert(0, search)
@@ -19,6 +19,8 @@ class SearchCache:
     def __str__(self):
         string = "Your previous searches are :"
         for search in self.__searches:
-            string.__add__("\n")
-            string.__add__(search)
+            string += "\n"
+            keywords = search.get_key_words()
+            for k in keywords:
+                string += k + " "
         return string
