@@ -31,5 +31,6 @@ def test___str__():
     sc.add(Search(['xml', 'txt']))
     string = "Your previous searches are :"
     for search in sc.get_searches():
-        string += "\n" + search.get_key_words()[0] + " " + search.get_key_words()[1] + " "
+        string += "\n" + search.get_key_words()[0] + " " + \
+                  search.get_key_words()[1] + " "
     assert string == sc.__str__()

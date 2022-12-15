@@ -1,7 +1,5 @@
 # Store the search already done to reuse this search if necessary
 
-from entities.search import Search
-
 
 class SearchCache:
     def __init__(self):
