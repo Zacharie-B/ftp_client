@@ -24,4 +24,4 @@ class Searching:
         self.__search_cache.add(search)
 
     def get_search_cache(self):
-        return self.__search_cache
+        return self.__search_cache.get_searches()
