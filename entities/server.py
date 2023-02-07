@@ -3,7 +3,10 @@ from abc import ABC, abstractmethod
 
 
 class Server(ABC):
-    @property
     @abstractmethod
-    def port_number(self):
+    def get_port_number(self):
+        pass
+
+    @abstractmethod
+    def get_ip_address(self):
         pass
